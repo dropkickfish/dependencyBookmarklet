@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontify Dependencies Migration Bookmarklet</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .bookmarklet {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .bookmarklet:hover {
+            background-color: #2980b9;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            border: 1px solid #e9ecef;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .instructions {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frontify Dependencies Migration Bookmarklet</h1>
+    
+    <p>This bookmarklet helps you migrate custom metadata property dependencies from one Frontify library to another.</p>
+    
+    <div class="instructions">
+        <h2>Installation Instructions</h2>
+        <p>Drag the link below to your bookmarks bar:</p>
+        <a class="bookmarklet" href="javascript:(function(){var script=document.createElement('script');script.src='https://raw.githubusercontent.com/yourusername/CustomMetadataDependencies/main/migrateDependenciesBookmarklet.js';document.body.appendChild(script);})();">Frontify Dependencies Migration</a>
+    </div>
+    
+    <h2>How to Use</h2>
+    <ol>
+        <li>Navigate to the source Frontify library page (the library containing the properties with dependencies you want to migrate).</li>
+        <li>Click the "Frontify Dependencies Migration" bookmarklet in your bookmarks bar.</li>
+        <li>A panel will appear on the right side of the page.</li>
+        <li>Enter the destination library ID (the library where you want to copy the dependencies to).</li>
+        <li>The CSRF token will be automatically detected if possible. If not, you'll need to enter it manually.</li>
+        <li>Click the "Migrate Dependencies" button.</li>
+        <li>The bookmarklet will migrate the dependencies and display the results in the log.</li>
+    </ol>
+    
+    <h2>Manual Installation</h2>
+    <p>If you prefer to install the bookmarklet manually, follow these steps:</p>
+    <ol>
+        <li>Create a new bookmark in your browser.</li>
+        <li>Name it "Frontify Dependencies Migration".</li>
+        <li>Copy and paste the following code into the URL/location field:</li>
+    </ol>
+    <pre><code>javascript:(function(){var script=document.createElement('script');script.src='https://raw.githubusercontent.com/yourusername/CustomMetadataDependencies/main/migrateDependenciesBookmarklet.js';document.body.appendChild(script);})();</code></pre>
+    
+    <h2>Troubleshooting</h2>
+    <ul>
+        <li>If the bookmarklet doesn't work, check the browser console for errors.</li>
+        <li>Make sure you have the necessary permissions to access and modify both libraries.</li>
+        <li>If the CSRF token is not automatically detected, you'll need to find it manually and enter it.</li>
+        <li>If properties are not being migrated, ensure that matching properties exist in both libraries with the same name and type.</li>
+    </ul>
+    
+    <p>For more information, see the <a href="README.md">README</a> file.</p>
+</body>
+</html> 
